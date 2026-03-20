@@ -55,6 +55,8 @@ Feel free to attempt to create this project based on the overview and rubric spe
 ## API Endpoint                                                                                  
 http://localhost:3000/api/images?filename=fjord.jpg&width=200&height=200         
 
+http://localhost:3000/api/images/all
+
 ## Version Control
 
 Although not a requirement, we recommend using Git from the very beginning if you choose to build on your local environment or use the provided workspace. Make sure to commit often and to use well-formatted commit messages.
