@@ -52,6 +52,9 @@ Feel free to attempt to create this project based on the overview and rubric spe
    If everything else has gone well, you should be able to compile your typescript and start up your production server to test that everything still works as expected. Make sure you've provided all necessary information in your readme file, so your reviewer knows how to test your API. If everything works and your documentation is complete, you're ready to submit!
    **_Congratulations!_**
 
+## API Endpoint                                                                                  
+http://localhost:3000/api/images?filename=fjord.jpg&width=200&height=200         
+
 ## Version Control
 
 Although not a requirement, we recommend using Git from the very beginning if you choose to build on your local environment or use the provided workspace. Make sure to commit often and to use well-formatted commit messages.
