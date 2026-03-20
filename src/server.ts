@@ -22,11 +22,11 @@ app.get('/api/images', async (req: Request, res: Response): Promise<void> => {
         return;
     }
 
-    const widthNum = parseInt(width as string, 10);
-    const heightNum = parseInt(height as string, 10);
+    const widthNum = Number(width);
+    const heightNum = Number(height);
 
-    if (isNaN(widthNum) || isNaN(heightNum)) {
-        res.status(400).json({ error: 'Width and height must be valid numbers' });
+    if (!Number.isInteger(widthNum) || !Number.isInteger(heightNum)) {
+        res.status(400).json({ error: 'Width and height must be valid integers' });
         return;
     }
 
@@ -52,6 +52,7 @@ app.get('/api/images', async (req: Request, res: Response): Promise<void> => {
         res.set('Content-Type', 'image/jpeg');
         res.send(image);
     } catch (err) {
+        console.error('Error processing image:', err);
         res.status(500).json({ error: 'Error processing image' });
     }
 });
@@ -62,6 +63,7 @@ app.get('/api/images/all', async (_req: Request, res: Response): Promise<void> =
         const available = await getAvailableImages();
         res.send(available);
     } catch (err) {
+        console.error('Error fetching images:', err);
         res.status(404).json({
             error: `Images not found`,
         });

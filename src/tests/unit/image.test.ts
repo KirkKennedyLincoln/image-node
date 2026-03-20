@@ -1,11 +1,9 @@
-import { 
-    resizeImage, 
-    getAvailableImages, 
-    processAndCacheImage, 
-    getCachedImage, 
+import {
+    resizeImage,
+    getAvailableImages,
+    processAndCacheImage,
     getImage,
     IMAGES_DIR,
-    THUMBS_DIR,
     imageExists
 } from '../../features/images';
 
